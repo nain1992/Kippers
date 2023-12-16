@@ -19,8 +19,13 @@ import ForgotHeader from "../../component/ForgotHeader";
 import { light } from "../../scheme";
 import FeaturedCars from "../component/FeaturedCars";
 import { AntDesign } from "@expo/vector-icons";
+import Carcollection from "./components/Carcollection";
+import Confirmationmodel from "./components/Confirmationmodel";
 
 const Mycars = (props) => {
+  const [ismodelvisible, setisModelvisible] = useState(false);
+  const [isedit, setIsedit] = useState(false);
+
   return (
     <View style={styles.container}>
       {mycars.map((item, index) => {
@@ -51,7 +56,11 @@ const Mycars = (props) => {
         <View style={styles.FeaturedCadWrapper}>
           {featured.map((item, index) => {
             return (
-              <FeaturedCars
+              <Carcollection
+                onDletePress={() => {
+                  setIsedit(false);
+                  setisModelvisible(true);
+                }}
                 item={item}
                 key={index}
                 onPress={() =>
@@ -62,6 +71,12 @@ const Mycars = (props) => {
           })}
         </View>
       </ScrollView>
+      {ismodelvisible && (
+        <Confirmationmodel
+          // onOkPress
+          oncancelPress={() => setisModelvisible(false)}
+        />
+      )}
     </View>
   );
 };

@@ -32,7 +32,6 @@ const CarDetails = (props) => {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      {/* {console.log(data)} */}
       <StatusBar style="auto" />
       <View style={styles.HeaderBody}>
         <TouchableOpacity onPress={() => props.navigation.goBack()}>
@@ -79,7 +78,7 @@ const CarDetails = (props) => {
                   item: props?.route?.params?.item,
                 })
               }
-              onPress={() => props.navigation.navigate("Partner")}
+              // onPress={() => props.navigation.navigate("Partner")}
               data={data}
             />
           );

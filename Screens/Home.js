@@ -72,7 +72,6 @@ const Home = (props) => {
   const [byclass, setByclass] = useState("All");
   const [filterpopup, setFilterPopup] = useState(false);
 
-  console.log(data);
   let name = data?.fullname;
 
   const handleClass = (byclass) => {
@@ -85,7 +84,6 @@ const Home = (props) => {
   let data = props?.users;
   let names = data?.fullname.split(" ")[0];
   // let fname = names?.shift(0);
-  console.log("here " + names);
 
   return (
     <View style={styles.container}>

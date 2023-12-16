@@ -31,7 +31,6 @@ const TrackBooking = (props) => {
 
   return (
     <View style={styles.container}>
-      {console.log("abcd", data)}
       <StatusBar style="auto" />
       <View>
         {BookingTrack.map((item, index) => {
