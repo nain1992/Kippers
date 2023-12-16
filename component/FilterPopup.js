@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
-  StatusBar,
-  Modal,
-} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

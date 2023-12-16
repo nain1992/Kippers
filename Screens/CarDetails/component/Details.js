@@ -45,11 +45,7 @@ const CarDetails = (props) => {
 
   return (
     <View>
-      {/* {cardetails2.map((item, index) => {
-        return ( */}
       <View>
-        {console.log(data)}
-        {console.log(item)}
         <View style={styles.ImgWrapper}>
           <Image
             source={data?.item?.Image}
@@ -61,9 +57,8 @@ const CarDetails = (props) => {
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {ScrollCars.map((item, index) => {
               return (
-                <TouchableOpacity style={styles.ScrollCarImage}>
+                <TouchableOpacity key={index} style={styles.ScrollCarImage}>
                   <Image
-                    key={index}
                     source={item?.img}
                     style={{ height: "100%", width: "100%" }}
                     resizeMode="contain"
@@ -217,7 +212,7 @@ const styles = StyleSheet.create({
   DepositPriceText: {
     fontFamily: "UB",
     fontSize: rf(12),
-    color: "##000000",
+    color: "#000000",
     textAlign: "center",
   },
   BorderView: {

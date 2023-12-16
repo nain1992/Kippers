@@ -122,19 +122,37 @@ const Home = (props) => {
               Title="Mercedes"
               onPress={() => props.navigation.navigate("TopRated")}
             />
-            <CarSponsers Img={require("../assets/Tesla.png")} Title="Tesla" />
+            <CarSponsers
+              Img={require("../assets/Tesla.png")}
+              Title="Tesla"
+              onPress={() => props.navigation.navigate("TopRated")}
+            />
             <CarSponsers
               Img={require("../assets/BMW.png")}
+              onPress={() => props.navigation.navigate("TopRated")}
               Title="BMW"
               // onPress={() => props.navigation.navigate("CarDetails")}
             />
-            <CarSponsers Img={require("../assets/Toyota.png")} Title="Toyota" />
-            <CarSponsers Img={require("../assets/Volvo.png")} Title="Volvo" />
+            <CarSponsers
+              Img={require("../assets/Toyota.png")}
+              Title="Toyota"
+              onPress={() => props.navigation.navigate("TopRated")}
+            />
+            <CarSponsers
+              Img={require("../assets/Volvo.png")}
+              Title="Volvo"
+              onPress={() => props.navigation.navigate("TopRated")}
+            />
             <CarSponsers
               Img={require("../assets/Bugati.png")}
               Title="Bugatti"
+              onPress={() => props.navigation.navigate("TopRated")}
             />
-            <CarSponsers Img={require("../assets/Honda.png")} Title="Honda" />
+            <CarSponsers
+              Img={require("../assets/Honda.png")}
+              Title="Honda"
+              onPress={() => props.navigation.navigate("TopRated")}
+            />
             <CarSponsers
               Icon
               Title="More"

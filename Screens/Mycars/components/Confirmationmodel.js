@@ -17,7 +17,7 @@ import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 
-const Carcollection = (props) => {
+const Confirmationmodel = (props) => {
   const { item } = props;
   return (
     <Modal transparent={true} animationType="fade">
@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => ({
   errors: state.errors.errors,
 });
-export default connect(mapStateToProps)(Carcollection);
+export default connect(mapStateToProps)(Confirmationmodel);

@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  StatusBar,
-  Modal,
-  Switch,
-} from "react-native";
+import { StyleSheet, Text, View, Image, StatusBar } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -19,7 +11,6 @@ import { Ionicons } from "@expo/vector-icons";
 import ProfilePicture from "./component/ProfilePicture";
 import ProfileFields from "./component/ProfileFields";
 import BottomTabMenu from "../../component/BottomTabMenu";
-import { toggleTheme } from "../../state-management/actions/theme";
 
 const Profile = (props) => {
   const styles = StyleSheet.create({
@@ -67,16 +58,6 @@ const Profile = (props) => {
   const toggleSwitch = () => {
     setIsEnabled((previousState) => !previousState);
   };
-  const [theme, setTheme] = useState(false);
-  useEffect(() => {
-    props?.toggleTheme(isEnabled);
-  }, [isEnabled]);
-
-  let data = props?.users;
-
-  useEffect(() => {
-    props?.users;
-  }, []);
 
   return (
     <View style={styles.container}>
@@ -180,7 +161,6 @@ const Profile = (props) => {
 
 const mapStateToProps = (state) => ({
   errors: state.errors.errors,
-  theme: state.theme.theme,
   users: state.main.new_user,
 });
-export default connect(mapStateToProps, { toggleTheme })(Profile);
+export default connect(mapStateToProps, {})(Profile);

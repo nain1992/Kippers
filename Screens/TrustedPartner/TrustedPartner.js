@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
-  StatusBar,
-} from "react-native";
+import { StyleSheet, Text, View, ScrollView, StatusBar } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -16,7 +8,7 @@ import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import ForgotHeader from "../../component/ForgotHeader";
 import { light } from "../../scheme";
-import { Trusted, PartnerTrusted } from "../../data/dummydata";
+import { PartnerTrusted } from "../../data/dummydata";
 import TrustedComponent from "./component/TrustedComponent";
 
 const TrustedPartner = (props) => {

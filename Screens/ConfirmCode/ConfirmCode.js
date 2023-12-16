@@ -3,10 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
   StatusBar,
-  Image,
-  ScrollView,
   KeyboardAvoidingView,
 } from "react-native";
 import {
@@ -14,7 +11,6 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { dark, light } from "../../scheme";
-import { LinearGradient } from "expo-linear-gradient";
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import ForgotHeader from "../../component/ForgotHeader";

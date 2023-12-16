@@ -4,8 +4,6 @@ import {
   Text,
   View,
   TouchableOpacity,
-  ImageBackground,
-  ScrollView,
   StatusBar,
   Image,
 } from "react-native";

@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
-  StatusBar,
-  Image,
-} from "react-native";
+import { StyleSheet, View, ScrollView, StatusBar, Image } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -27,9 +18,9 @@ const HelpContact = (props) => {
   const [currentPage, setCurrentPage] = useState("FAQS");
   const [bycategory, setByCategory] = useState("General");
 
-  const handleCategory = (bycategory) => {
-    setByCategory(bycategory);
-  };
+  // const handleCategory = (bycategory) => {
+  //   setByCategory(bycategory);
+  // };
 
   const renderCurrentPage = () => {
     switch (currentPage) {

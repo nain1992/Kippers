@@ -100,6 +100,7 @@ const SpecialOffer = (props) => {
       <View style={styles.WrapDot}>
         {Offers.map((item, index) => (
           <View
+            key={index}
             style={imgActive == index ? styles.dotActive : styles.dot}
           ></View>
         ))}

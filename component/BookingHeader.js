@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  ScrollView,
-  StatusBar,
-} from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Ionicons } from "@expo/vector-icons";
 import { dark, light } from "../scheme";
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";

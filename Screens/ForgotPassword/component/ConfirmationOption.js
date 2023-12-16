@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   InfoText: {
     fontFamily: "UB",
     fontSize: rf(13),
-    color: "##000000",
+    color: "#000000",
   },
 });
 

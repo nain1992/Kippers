@@ -18,9 +18,9 @@ import { light } from "../../../scheme";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Carcollection = (props) => {
-  const [isedit, setIsedit] = useState(false);
+  // const [isedit, setIsedit] = useState(false);
   const [isdeleted, setIsdeleted] = useState(false);
-  const { item } = props;
+  const { item, isedit, setIsedit, onDotPress } = props;
   return (
     <Pressable onPress={props?.onPress} style={{ marginVertical: hp("2%") }}>
       <View style={styles.BodyWRapper}>
@@ -73,10 +73,11 @@ const Carcollection = (props) => {
           {item?.price}
         </Text>
       </View>
-      {isedit && (
+      {isedit ? (
         <View style={styles.dropdown}>
           <TouchableOpacity
-            onPress={() => setIsedit(false)}
+            // onPress={() => setIsedit(false)}
+            onPress={onDotPress}
             style={styles.innerbody}
           >
             <AntDesign name="download" size={hp("2%")} color="black" />
@@ -103,7 +104,7 @@ const Carcollection = (props) => {
             </Text>
           </TouchableOpacity>
         </View>
-      )}
+      ) : null}
     </Pressable>
   );
 };

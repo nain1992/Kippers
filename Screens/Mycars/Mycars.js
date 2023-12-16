@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   ScrollView,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -13,7 +12,6 @@ import {
 } from "react-native-responsive-screen";
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
-import BottomTabMenu from "../../component/BottomTabMenu";
 import { AddressHeader, featured, mycars } from "../../data/dummydata";
 import ForgotHeader from "../../component/ForgotHeader";
 import { light } from "../../scheme";
@@ -26,6 +24,14 @@ const Mycars = (props) => {
   const [ismodelvisible, setisModelvisible] = useState(false);
   const [isedit, setIsedit] = useState(false);
 
+  const handleDelete = () => {
+    setIsedit(false);
+    setisModelvisible(true);
+  };
+
+  const handleDostPress = () => {
+    setIsedit(true);
+  };
   return (
     <View style={styles.container}>
       {mycars.map((item, index) => {
@@ -57,10 +63,10 @@ const Mycars = (props) => {
           {featured.map((item, index) => {
             return (
               <Carcollection
-                onDletePress={() => {
-                  setIsedit(false);
-                  setisModelvisible(true);
-                }}
+                isedit={isedit}
+                setIsedit={setIsedit}
+                onDotPress={handleDostPress}
+                onDletePress={handleDelete}
                 item={item}
                 key={index}
                 onPress={() =>
