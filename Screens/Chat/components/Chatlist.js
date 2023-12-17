@@ -20,11 +20,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 
-const InviteFriends = (props) => {
-  const { item } = props;
-  const [invite, setInvite] = useState(1);
+const Chatlist = (props) => {
+  const { item, onPress } = props;
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <View style={styles.ImageBody}>
         <Image
           source={item?.Image}
@@ -36,27 +35,8 @@ const InviteFriends = (props) => {
         <Text style={styles.NameText}>{item?.textname}</Text>
         <Text style={styles.NumText}>{item?.textnum}</Text>
       </View>
-      <TouchableOpacity
-        onPress={() => setInvite(!invite)}
-        style={[
-          styles.InviteBtn,
-          {
-            backgroundColor: invite == 1 ? light?.Btn : "transparent",
-          },
-        ]}
-      >
-        <Text
-          style={[
-            styles.InviteText,
-            {
-              color: invite == 1 ? "#fff" : light?.Btn,
-            },
-          ]}
-        >
-          {invite ? "Invite" : "Invited"}
-        </Text>
-      </TouchableOpacity>
-    </View>
+      <Text style={styles.timetext}>09:15</Text>
+    </TouchableOpacity>
   );
 };
 
@@ -66,10 +46,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: wp("5%"),
     marginVertical: hp("1%"),
-    borderWidth: 1,
-    borderColor: "#e5e5e5",
-    borderRadius: 20,
-    borderColor: "#e5e5e5",
     height: hp("8%"),
   },
   ImageBody: {
@@ -92,24 +68,14 @@ const styles = StyleSheet.create({
     fontSize: rf(12),
     color: "#616161",
   },
-  InviteBtn: {
-    height: hp("3.5"),
-    width: wp("15%"),
-    borderRadius: 100,
-    backgroundColor: light?.Btn,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 2,
-    borderColor: light?.Btn,
-  },
-  InviteText: {
+  timetext: {
     fontFamily: "UR",
-    fontSize: rf(12),
-    color: "#fff",
+    fontSize: rf(10),
+    color: "#616161",
   },
 });
 
 const mapStateToProps = (state) => ({
   errors: state.errors.errors,
 });
-export default connect(mapStateToProps)(InviteFriends);
+export default connect(mapStateToProps)(Chatlist);

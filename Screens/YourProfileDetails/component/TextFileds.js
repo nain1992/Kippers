@@ -40,7 +40,7 @@ const TextFields = (props) => {
           >
             {countryCode}
           </Text>
-          <AntDesign name="down" size={hp("2%")} color="#212121" />
+          <AntDesign name="down" size={hp("1.8%")} color="#212121" />
           <CountryPicker
             show={show}
             // when picker button press you will get the country object with dial code
@@ -51,11 +51,14 @@ const TextFields = (props) => {
           />
         </TouchableOpacity>
       ) : null}
-      <TextInput
-        {...props}
-        placeHolderTextColor={"#212121"}
-        style={styles.Input}
-      />
+      <View style={styles.inputstyles}>
+        <TextInput
+          {...props}
+          placeHolderTextColor={"#212121"}
+          style={styles.Input}
+        />
+      </View>
+
       <TouchableOpacity onPress={props?.onPress}>
         {props?.Icon}
       </TouchableOpacity>
@@ -76,12 +79,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp("3%"),
   },
   Input: {
-    height: "100%",
-    width: "90%",
     fontFamily: "UB",
     color: light.textStandard,
     fontSize: rf(12),
   },
+  inputstyles: {
+    justifyContent: "center",
+    width: "90%",
+  },
+
   CountryPicker: {
     width: "15%",
     height: "50%",

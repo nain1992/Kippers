@@ -52,6 +52,7 @@ const SpecialOffer = (props) => {
               key={index}
               style={styles.container}
               source={item?.Image}
+              resizeMode="contain"
             >
               <Pressable onPress={props.onPress}>
                 <View style={styles.TextWrapper}>
@@ -62,8 +63,8 @@ const SpecialOffer = (props) => {
                       styles.WeekText,
                       {
                         fontSize: rf(12),
-                        fontFamily: "UR",
-                        color: dark.LableText,
+                        fontFamily: "UB",
+                        color: "#fff",
                       },
                     ]}
                   >
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
   container: {
     width: wp("90%"),
     height: hp("22%"),
-    backgroundColor: "#E7E7E7",
+    backgroundColor: "#BDBDBD",
     borderRadius: 15,
     alignSelf: "center",
     flexDirection: "row",
@@ -126,12 +127,12 @@ const styles = StyleSheet.create({
   NumText: {
     fontFamily: "UB",
     fontSize: rf(30),
-    color: dark.LableText,
+    color: "#fff",
   },
   WeekText: {
     fontFamily: "UB",
     fontSize: rf(16),
-    color: dark.LableText,
+    color: "#fff",
   },
   TextWrapper: {
     justifyContent: "space-around",
@@ -162,7 +163,7 @@ const styles = StyleSheet.create({
   dotActive: {
     height: 5,
     width: 10,
-    backgroundColor: "#fff",
+    backgroundColor: "#222",
     margin: 3,
     borderRadius: 10,
   },

@@ -9,25 +9,25 @@ export const dummydata = [
 
 export const Offers = [
   {
-    Image: require("../assets/CarImage1.jpg"),
+    Image: require("../assets/14.png"),
     percent: "20%",
     deals: "Week Deals",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/CarImage2.jpg"),
+    Image: require("../assets/15.png"),
     percent: "25%",
     deals: "Week Deals",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/CarImage3.jpg"),
+    Image: require("../assets/16.png"),
     percent: "22%",
     deals: "Week Deals",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/CarImage4.jpg"),
+    Image: require("../assets/17.png"),
     percent: "18%",
     deals: "Week Deals",
     dics: "Get a new car discount, only valid this week",
@@ -43,7 +43,7 @@ export const sponsors = [
 export const featured = [
   {
     Title: "BMW M4 Series",
-    Image: require("../assets/Image.png"),
+    Image: require("../assets/13.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -51,7 +51,7 @@ export const featured = [
   },
   {
     Title: "Camaro Sports",
-    Image: require("../assets/Car2.png"),
+    Image: require("../assets/14.png"),
     ratting: "4.7",
     disprice: "AED 175,000",
     price: "AED 175,000",
@@ -59,7 +59,7 @@ export const featured = [
   },
   {
     Title: "Audi Sports",
-    Image: require("../assets/Car3.png"),
+    Image: require("../assets/15.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -67,7 +67,7 @@ export const featured = [
   },
   {
     Title: "McLaren Supercar",
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/16.png"),
     ratting: "4.9",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -75,7 +75,7 @@ export const featured = [
   },
   {
     Title: "McLaren Supercar",
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/17.png"),
     ratting: "4.9",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -83,7 +83,7 @@ export const featured = [
   },
   {
     Title: "McLaren Supercar",
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/18.png"),
     ratting: "4.9",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -143,49 +143,49 @@ export const mywatchlist = [
 ];
 export const OffersSpecial = [
   {
-    Image: require("../assets/Car.png"),
+    Image: require("../assets/12.png"),
     percent: "20%",
     deals: "Week Deals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special2.png"),
+    Image: require("../assets/13.png"),
     percent: "10%",
     deals: "Top Deals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special3.png"),
+    Image: require("../assets/14.png"),
     percent: "15%",
     deals: "New Arrivals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special4.png"),
+    Image: require("../assets/15.png"),
     percent: "12%",
     deals: "Black Friday!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Car.png"),
+    Image: require("../assets/16.png"),
     percent: "20%",
     deals: "Week Deals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special2.png"),
+    Image: require("../assets/17.png"),
     percent: "10%",
     deals: "Top Deals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special3.png"),
+    Image: require("../assets/18.png"),
     percent: "15%",
     deals: "New Arrivals!",
     dics: "Get a new car discount, only valid this week",
   },
   {
-    Image: require("../assets/Special4.png"),
+    Image: require("../assets/11.png"),
     percent: "12%",
     deals: "Black Friday!",
     dics: "Get a new car discount, only valid this week",
@@ -194,7 +194,7 @@ export const OffersSpecial = [
 export const toprated = [
   {
     Title: "BMW M4 Series",
-    Image: require("../assets/Image.png"),
+    Image: require("../assets/13.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -202,7 +202,7 @@ export const toprated = [
   },
   {
     Title: "Camaro Sports",
-    Image: require("../assets/Car2.png"),
+    Image: require("../assets/14.png"),
     ratting: "4.7",
     disprice: "AED 175,000",
     price: "AED 175,000",
@@ -210,7 +210,7 @@ export const toprated = [
   },
   {
     Title: "Audi Sports",
-    Image: require("../assets/Car3.png"),
+    Image: require("../assets/15.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -218,7 +218,7 @@ export const toprated = [
   },
   {
     Title: "McLaren Supercar",
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/16.png"),
     ratting: "4.9",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -226,7 +226,7 @@ export const toprated = [
   },
   {
     Title: "BMW M4 Series",
-    Image: require("../assets/Image.png"),
+    Image: require("../assets/17.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -234,7 +234,7 @@ export const toprated = [
   },
   {
     Title: "Camaro Sports",
-    Image: require("../assets/Car2.png"),
+    Image: require("../assets/18.png"),
     ratting: "4.7",
     disprice: "AED 175,000",
     price: "AED 175,000",
@@ -242,7 +242,7 @@ export const toprated = [
   },
   {
     Title: "Audi Sports",
-    Image: require("../assets/Car3.png"),
+    Image: require("../assets/13.png"),
     ratting: "4.5",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -250,7 +250,7 @@ export const toprated = [
   },
   {
     Title: "McLaren Supercar",
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/16.png"),
     ratting: "4.9",
     disprice: "AED 115,000",
     price: "AED 175,000",
@@ -397,7 +397,7 @@ export const comments = [
 ];
 export const Activebookings = [
   {
-    Image: require("../assets/Car.png"),
+    Image: require("../assets/12.png"),
     Title: "BMW M5 Series",
     carcolor: "Silver",
     Delievery: "in Delievery",
@@ -406,7 +406,7 @@ export const Activebookings = [
     backgroundColor: "#E7E7E7",
   },
   {
-    Image: require("../assets/Car2.png"),
+    Image: require("../assets/13.png"),
     Title: "Ferrari Sports",
     carcolor: "Yellow",
     Delievery: "in Delievery",
@@ -415,7 +415,7 @@ export const Activebookings = [
     backgroundColor: "#FFC02D",
   },
   {
-    Image: require("../assets/Car3.png"),
+    Image: require("../assets/14.png"),
     Title: "Audi Sports",
     carcolor: "Red",
     Delievery: "in Delievery",
@@ -424,7 +424,7 @@ export const Activebookings = [
     backgroundColor: "#F54336",
   },
   {
-    Image: require("../assets/Car4.png"),
+    Image: require("../assets/15.png"),
     Title: "McLaren Sports",
     carcolor: "Silver",
     Delievery: "in Delievery",
@@ -435,7 +435,7 @@ export const Activebookings = [
 ];
 export const Completedbooking = [
   {
-    img: require("../assets/Car.png"),
+    img: require("../assets/16.png"),
     title: "BMW M5 Series",
     carcolor: "Silver",
     Delievery: "Completed",
@@ -443,7 +443,7 @@ export const Completedbooking = [
     btntexts: "Leave Review",
   },
   {
-    img: require("../assets/Car2.png"),
+    img: require("../assets/17.png"),
     title: "Ferrari Sports",
     carcolor: "Yellow",
     Delievery: "Completed",
@@ -451,7 +451,7 @@ export const Completedbooking = [
     btntexts: "Leave Review",
   },
   {
-    img: require("../assets/Car3.png"),
+    img: require("../assets/18.png"),
     title: "Audi Sports",
     carcolor: "Red",
     Delievery: "Completed",
@@ -459,7 +459,7 @@ export const Completedbooking = [
     btntexts: "Leave Review",
   },
   {
-    img: require("../assets/Car4.png"),
+    img: require("../assets/15.png"),
     title: "McLaren Sports",
     carcolor: "Silver",
     Delievery: "Completed",
@@ -473,6 +473,63 @@ export const Track = [
     title: "BMW M5 Series",
     price: "AED 35,000",
     rental: "Monthly Rental",
+  },
+];
+export const chatdata = [
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
+  },
+  {
+    Image: require("../assets/Profile.png"),
+    textname: "Zeeshan",
+    textnum: "hi where are you ",
   },
 ];
 export const invitation = [
@@ -605,6 +662,11 @@ export const PRivacyHEader = [
 export const InviteHeader = [
   {
     Title: "Invite Friends",
+  },
+];
+export const Chats = [
+  {
+    Title: "My Chats",
   },
 ];
 export const HelpHeader = [

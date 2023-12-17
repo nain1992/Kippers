@@ -16,7 +16,6 @@ import {
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import { light } from "../../../scheme";
-import { Entypo } from "@expo/vector-icons";
 
 const TextFields = (props) => {
   return (
@@ -30,15 +29,17 @@ const TextFields = (props) => {
     >
       {props?.Icon}
 
-      <TextInput
-        onPressIn={props?.onPress}
-        placeholder={props?.placeholder}
-        placeholderTextColor={"#9E9E9E"}
-        style={styles.FieldText}
-        secureTextEntry={props?.secureTextEntry}
-        onChangeText={props?.onChangeText}
-        multiline={props.multiline}
-      />
+      <View style={styles.inputstyles}>
+        <TextInput
+          onPressIn={props?.onPress}
+          placeholder={props?.placeholder}
+          placeholderTextColor={"#9E9E9E"}
+          style={styles.FieldText}
+          secureTextEntry={props?.secureTextEntry}
+          onChangeText={props?.onChangeText}
+          multiline={props.multiline}
+        />
+      </View>
 
       <TouchableOpacity onPress={props?.onEyePress}>
         {props?.Eye}
@@ -59,12 +60,14 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   FieldText: {
-    // height: "100%",
-    width: "85%",
     fontFamily: "UB",
     fontSize: rf(12),
     color: light.textStandard,
+  },
+  inputstyles: {
+    width: "85%",
     marginHorizontal: 5,
+    justifyContent: "center",
   },
 });
 

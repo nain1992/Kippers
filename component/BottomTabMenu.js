@@ -100,7 +100,7 @@ const BottomTabMenu = (props) => {
       )}
       {props?.activeicon === "Inbox" ? (
         <TouchableOpacity
-          onPress={() => props?.navigation?.navigate("Inbox")}
+          onPress={() => props?.navigation?.navigate("Chat")}
           style={styles.innerwrapper}
         >
           <View style={styles.iconbody}>
@@ -114,7 +114,7 @@ const BottomTabMenu = (props) => {
         </TouchableOpacity>
       ) : (
         <TouchableOpacity
-          onPress={() => props?.navigation?.navigate("Inbox")}
+          onPress={() => props?.navigation?.navigate("Chat")}
           style={styles.innerwrapper}
         >
           <View style={styles.iconbody}>

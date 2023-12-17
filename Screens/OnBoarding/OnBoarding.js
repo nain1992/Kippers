@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StatusBar,
   Image,
+  ImageBackground,
 } from "react-native";
 import {
   widthPercentageToDP as wp,
@@ -21,39 +22,35 @@ const OnBoarding = (props) => {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <View style={styles.BgImageWrapper}>
-        <LinearGradient
-          // Background Linear Gradient
-          colors={["#EE1010", "#CC0E0E"]}
-          style={styles.background}
-        />
-        <View style={styles.framebody}>
-          <Image
-            source={require("../../assets/car10.png")}
-            style={{ height: "100%", width: "100%" }}
-            resizeMode="contain"
-          />
+      <ImageBackground
+        style={styles.BgImageWrapper}
+        source={require("../../assets/newcar1.jpg")}
+      >
+        <View style={styles.framewrapper}>
+          <View style={styles.framebody}>
+            <Image
+              source={require("../../assets/newcar4.png")}
+              style={{ height: "100%", width: "100%" }}
+              resizeMode="contain"
+            />
+          </View>
         </View>
-        <View style={styles.Wrapper}>
-          <View style={styles.WelcomeWrapper}>
-            <Text style={styles.welcometext}>Welcome to 👋</Text>
-          </View>
-          <View style={styles.TextWrapper}>
-            <Text style={styles.Kipperstext}>Kipper’s Classics</Text>
-          </View>
-          <View style={styles.TextWrapper}>
-            <Text style={styles.LableText}>
+        <View style={styles.contentwrapper}>
+          <Text style={styles.welcome}>Welcome to 👋</Text>
+          <View>
+            <Text style={styles.kippers}>Kipper’s Classics</Text>
+            <Text style={styles.rentcartext}>
               Rent a Car online Today & Enjoy Best Deals, Rate & Accessories
             </Text>
           </View>
           <TouchableOpacity
-            style={styles.BtnBody}
-            onPress={() => props.navigation.navigate("SignIn")}
+            onPress={() => props?.navigation?.navigate("SignIn")}
+            style={styles.btnbody}
           >
-            <View style={styles.btntextbody}>
-              <Text style={styles.btntext}>Let's Go</Text>
+            <View style={styles.innertextbody}>
+              <Text style={styles.btntext}>Let's Go!</Text>
             </View>
-            <View style={styles.vectorbody}>
+            <View style={styles.iconbody}>
               <Image
                 source={require("../../assets/2.png")}
                 style={{ height: "100%", width: "100%" }}
@@ -62,7 +59,7 @@ const OnBoarding = (props) => {
             </View>
           </TouchableOpacity>
         </View>
-      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -76,72 +73,62 @@ const styles = StyleSheet.create({
     height: hp("100%"),
     width: wp("100%"),
   },
-  background: {
-    position: "absolute",
-    height: "100%",
-    width: "100%",
-  },
-  Wrapper: {
-    height: hp("30%"),
-    width: wp("100%"),
-    position: "absolute",
-    bottom: 20,
-    justifyContent: "space-between",
-  },
-  WelcomeWrapper: {
+  framewrapper: {
+    flex: 0.8,
     justifyContent: "center",
-    overflow: "hidden",
-    paddingHorizontal: wp("5%"),
-  },
-
-  TextWrapper: {
-    paddingHorizontal: wp("5%"),
-  },
-  LableText: {
-    fontFamily: "UB",
-    color: "#fff",
-    fontSize: rf(15),
-  },
-  BtnBody: {
-    height: hp("7%"),
-    width: wp("90%"),
-    backgroundColor: "#fff",
-    borderRadius: 100,
     alignItems: "center",
-    alignSelf: "center",
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
-  btntext: {
-    fontFamily: "UB",
-    color: "#F51111",
-    fontSize: rf(15),
-    marginLeft: 15,
-  },
-  Kipperstext: {
-    fontFamily: "UB",
-    color: "#fff",
-    fontSize: rf(18),
-  },
-  welcometext: {
-    fontFamily: "UB",
-    color: "#fff",
-    fontSize: rf(25),
+    marginTop: hp("5%"),
   },
   framebody: {
     height: hp("40%"),
-    width: hp("100%"),
+    width: wp("90%"),
     alignSelf: "center",
-    marginTop: hp("10%"),
   },
-  vectorbody: {
+  contentwrapper: {
+    flex: 0.4,
+    paddingHorizontal: wp("5%"),
+    justifyContent: "space-around",
+    marginBottom: hp("5%"),
+  },
+  welcome: {
+    fontFamily: "UB",
+    fontSize: rf(28),
+    color: light.BtnText,
+  },
+  kippers: {
+    fontFamily: "UB",
+    fontSize: rf(22),
+    color: light.BtnText,
+    marginBottom: 5,
+  },
+  rentcartext: {
+    fontFamily: "UB",
+    fontSize: rf(14),
+    color: light.BtnText,
+  },
+  btnbody: {
+    height: hp("7%"),
+    width: wp("90%"),
+    borderRadius: 100,
+    backgroundColor: light.BtnText,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingRight: wp("3%"),
+  },
+  btntext: {
+    fontFamily: "UB",
+    fontSize: rf(14),
+    color: light.Btn,
+    marginLeft: wp("7%"),
+  },
+  iconbody: {
     height: 15,
     width: 30,
     overflow: "hidden",
-    marginRight: 15,
   },
-  btntextbody: {
-    width: "90%",
+  innertextbody: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },

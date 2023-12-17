@@ -12,6 +12,11 @@ import { light } from "../scheme";
 const StandardBtn = (props) => {
   return (
     <TouchableOpacity onPress={props?.onPress} style={styles.container}>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={["#F1AD85", "#EC2131"]}
+        style={styles.background}
+      />
       <Text style={styles.TextBtn}>{props?.Title}</Text>
     </TouchableOpacity>
   );
@@ -34,11 +39,17 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
 
     elevation: 5,
+    overflow: "hidden",
   },
   TextBtn: {
     fontFamily: "UB",
     fontSize: rf(14),
     color: light.BtnText,
+  },
+  background: {
+    height: "100%",
+    width: "100%",
+    position: "absolute",
   },
 });
 

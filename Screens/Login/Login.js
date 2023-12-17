@@ -43,11 +43,8 @@ const Login = (props) => {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <StatusBar style="auto" />
-
       <Logo onPress={() => props.navigation.goBack()} />
-
       <Text style={styles.TitleText}>Login to your Account</Text>
-
       <View style={styles.FieldWrapper}>
         <TextFields
           multiline
@@ -136,7 +133,7 @@ const styles = StyleSheet.create({
     fontSize: rf(24),
     color: light.textStandard,
     textAlign: "center",
-    marginTop: 10,
+    marginVertical: 10,
   },
 
   FieldWrapper: {

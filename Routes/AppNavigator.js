@@ -32,12 +32,15 @@ import AllMakes from "../Screens/AllMakes/AllMakes";
 import Addcar from "../Screens/Addcar/Addcar";
 import Inbox from "../Screens/Inbox/Inbox";
 import Mycars from "../Screens/Mycars/Mycars";
+import Chat from "../Screens/Chat/Chat";
+import Welcome from "../Screens/Welcome/Welcome";
 
 const { Navigator, Screen } = createStackNavigator();
 
 function AppNavigation() {
   return (
     <Navigator screenOptions={{ headerShown: false, animationEnabled: false }}>
+      <Screen name="Welcome" component={Welcome} />
       <Screen name="OnBoarding" component={OnBoarding} />
       <Screen name="SignIn" component={SignIn} />
       <Screen name="CreateAccount" component={CreateAccount} />
@@ -72,6 +75,7 @@ function AppNavigation() {
       <Screen name="Addcar" component={Addcar} />
       <Screen name="Inbox" component={Inbox} />
       <Screen name="Mycars" component={Mycars} />
+      <Screen name="Chat" component={Chat} />
     </Navigator>
   );
 }

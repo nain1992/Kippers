@@ -4,11 +4,6 @@ import {
   Text,
   View,
   TouchableOpacity,
-  StatusBar,
-  Image,
-  Dimensions,
-  KeyboardAvoidingView,
-  Modal,
   TextInput,
 } from "react-native";
 import {
@@ -43,15 +38,15 @@ const AddNewAddress = (props) => {
           style={styles.TextIput}
           placeholder="2899 Summer Drive Taylor, PC 48180"
         />
-        <Entypo name="location-pin" size={hp("2%")} color="black" />
+        <Entypo name="location-pin" size={hp("2%")} color={light.Btn} />
       </View>
       <View style={styles.DefualTAdressWrapper}>
         <TouchableOpacity
           onPress={() => setCheckBox(!checkbox)}
           style={styles.CheckBoxBody}
         >
-          {checkbox == true ? (
-            <MaterialIcons name="done" size={hp("2%")} color="black" />
+          {checkbox ? (
+            <MaterialIcons name="done" size={hp("2%")} color={light.Btn} />
           ) : null}
         </TouchableOpacity>
         <Text style={styles.DefualtText}>Make this as the default address</Text>
@@ -108,10 +103,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   TextIput: {
-    height: "100%",
     width: "90%",
     fontFamily: "UB",
-    fontSize: rf(13),
+    fontSize: rf(11),
     color: light.textStandard,
   },
   DefualTAdressWrapper: {
@@ -124,6 +118,7 @@ const styles = StyleSheet.create({
     width: 20,
     borderRadius: 5,
     borderWidth: 2,
+    borderColor: light.Btn,
     justifyContent: "center",
     alignItems: "center",
   },

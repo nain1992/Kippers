@@ -21,7 +21,7 @@ const TopRated = (props) => {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {Mercedes.map((item, index) => {
           return (
             <ForgotHeader

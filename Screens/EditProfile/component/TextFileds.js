@@ -73,9 +73,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp("3%"),
   },
   Input: {
-    // height: "100%",
     width: "90%",
-
     fontFamily: "UB",
     color: light.textStandard,
     fontSize: rf(12),

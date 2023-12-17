@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     fontSize: rf(24),
     color: light.textStandard,
     textAlign: "center",
-    marginTop: 10,
+    marginVertical: 10,
   },
   TitleTextWrapper: {
     alignItems: "center",

@@ -68,6 +68,7 @@ const MyBookings = (props) => {
           <View style={styles.RattingStarBody}>
             {stars.map((item, index) => (
               <TouchableOpacity
+                key={index}
                 onPress={() => setRatting(index)}
                 style={styles.StarBody}
               >
@@ -218,20 +219,21 @@ const styles = StyleSheet.create({
   },
   GiveCommentBody: {
     height: hp("7%"),
-    width: wp("90^"),
+    width: wp("90%"),
     borderWidth: 1,
     borderRadius: 10,
     alignSelf: "center",
     paddingHorizontal: 10,
     marginVertical: hp("2%"),
     overflow: "hidden",
+    justifyContent: "center",
   },
   FeedbackBody: {
-    height: "100%",
     width: "100%",
     fontFamily: "UB",
-    fontSize: rf(13),
+    fontSize: rf(12),
     color: light.textStandard,
+    justifyContent: "center",
   },
   BtnWrapper: {
     flexDirection: "row",

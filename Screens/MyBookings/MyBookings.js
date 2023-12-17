@@ -30,7 +30,7 @@ const MyBookings = (props) => {
     switch (currentBooking) {
       case "Active":
         return (
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             {Activebookings?.length <= 0 ? (
               <View style={styles.container}>
                 <View style={styles.NoBookingWrapper}>
@@ -61,7 +61,7 @@ const MyBookings = (props) => {
 
       case "Completed":
         return (
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             {Completedbooking?.length <= 0 ? (
               <View style={styles.container}>
                 <View style={styles.NoBookingWrapper}>

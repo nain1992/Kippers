@@ -13,8 +13,6 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Ionicons } from "@expo/vector-icons";
-
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import { light } from "../../scheme";
@@ -44,7 +42,7 @@ const FeatureCars = (props) => {
           <Image
             source={item?.Image}
             style={{ height: "100%", width: "100%" }}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </View>
       </View>

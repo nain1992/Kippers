@@ -25,7 +25,7 @@ const AddNewAddress = (props) => {
         style={styles.container}
         // behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <KeyboardAvoidingScrollView>
+        <KeyboardAvoidingScrollView showsVerticalScrollIndicator={false}>
           <StatusBar style="auto" />
 
           {AddAddress.map((item, index) => {
@@ -76,7 +76,7 @@ const AddNewAddress = (props) => {
             />
           </View>
         </View> */}
-          <View>{popup == true ? <AddressPopup /> : null}</View>
+          <View>{popup && <AddressPopup />}</View>
         </KeyboardAvoidingScrollView>
       </View>
     </>

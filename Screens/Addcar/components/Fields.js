@@ -28,7 +28,7 @@ const Fields = (props) => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: wp("5%"),
-    height: hp("14%"),
+    height: hp("13%"),
     justifyContent: "space-around",
   },
   titletext: {
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   inputstyles: {
-    // height: "100%",
     width: "100%",
     fontFamily: "UR",
     fontSize: rf(11),

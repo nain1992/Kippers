@@ -9,22 +9,28 @@ import {
   ScrollView,
   KeyboardAvoidingView,
 } from "react-native";
-import { dark, light } from "../../scheme";
 
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
+import {
+  Chats,
+  InviteHeader,
+  chatdata,
+  invitation,
+} from "../../data/dummydata";
 import ForgotHeader from "../../component/ForgotHeader";
-import Invitation from "./component/Invitation";
-import { InviteHeader, invitation } from "../../data/dummydata";
+import { light } from "../../scheme";
+import Invitation from "../InviteFriends/component/Invitation";
+import Chatlist from "./components/Chatlist";
 
-const InviteFriends = (props) => {
+const Chat = (props) => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <StatusBar style="auto" />
-      {InviteHeader.map((item, index) => {
+      {Chats.map((item, index) => {
         return (
           <ForgotHeader
             item={item}
@@ -35,8 +41,14 @@ const InviteFriends = (props) => {
       })}
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.box}>
-          {invitation.map((item, index) => {
-            return <Invitation item={item} key={index} />;
+          {chatdata.map((item, index) => {
+            return (
+              <Chatlist
+                onPress={() => props?.navigation?.navigate("Inbox")}
+                item={item}
+                key={index}
+              />
+            );
           })}
         </View>
       </ScrollView>
@@ -54,4 +66,4 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => ({
   errors: state.errors.errors,
 });
-export default connect(mapStateToProps)(InviteFriends);
+export default connect(mapStateToProps)(Chat);

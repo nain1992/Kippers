@@ -34,7 +34,7 @@ const Carcollection = (props) => {
           <Image
             source={item?.Image}
             style={{ height: "100%", width: "100%" }}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </View>
       </View>

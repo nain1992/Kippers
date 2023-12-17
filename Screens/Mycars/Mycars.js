@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "#F5F5F5",
     paddingLeft: 10,
+    justifyContent: "center",
   },
   inputstyles: {
-    height: "100%",
     width: "100%",
     fontFamily: "UR",
     fontSize: rf(11),
