@@ -27,7 +27,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adlerwareco.kippers"
     },
     "android": {
       "adaptiveIcon": {
@@ -36,7 +37,8 @@
       },
       "permissions": [
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.adlerwareco.kippers"
     },
     "web": {
       "favicon": "./assets/favicon.png"
