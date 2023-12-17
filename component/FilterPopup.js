@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Modal,
+  ScrollView,
+} from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -7,7 +14,6 @@ import {
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
 import { light } from "../scheme";
-import MultiSlider from "@ptomasroos/react-native-multi-slider";
 import CatogorySelector from "./CatogorySelector";
 
 const FilterPopup = (props) => {

@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   inputsyles: {
-    height: "100%",
     width: "90%",
     fontFamily: "UR",
     fontSize: rf(11),
