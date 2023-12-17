@@ -10,7 +10,7 @@
     ],
     "name": "Kippers",
     "slug": "kippers",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -36,18 +36,20 @@
       },
       "permissions": [
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.adlerware.kippers"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "runtimeVersion": {
-      "policy": "appVersion"
+      "policy": "sdkVersion"
     },
     "extra": {
       "eas": {
-        "projectId": "5042ce5b-6581-4e6c-b958-b5f093de30c3"
+        "projectId": "6d2cdfbb-2ff2-4774-9cc5-98dbaa0e543a"
       }
-    }
+    },
+    "owner": "adlerware"
   }
 }

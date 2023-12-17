@@ -34,48 +34,49 @@ import Inbox from "../Screens/Inbox/Inbox";
 import Mycars from "../Screens/Mycars/Mycars";
 import Chat from "../Screens/Chat/Chat";
 import Welcome from "../Screens/Welcome/Welcome";
+import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 
 const { Navigator, Screen } = createStackNavigator();
 
 function AppNavigation() {
   return (
     <Navigator screenOptions={{ headerShown: false, animationEnabled: false }}>
-      <Screen name="Welcome" component={Welcome} />
-      <Screen name="OnBoarding" component={OnBoarding} />
-      <Screen name="SignIn" component={SignIn} />
-      <Screen name="CreateAccount" component={CreateAccount} />
-      <Screen name="Login" component={Login} />
-      <Screen name="YourProfileDetails" component={YourProfileDetails} />
-      <Screen name="Home" component={Home} />
-      <Screen name="ForgotPassword" component={ForgotPassword} />
-      <Screen name="ConfirmCode" component={ConfirmCode} />
-      <Screen name="CreatePassword" component={CreatePassword} />
-      <Screen name="MyWatchList" component={MyWatchList} />
-      <Screen name="TopRated" component={TopRated} />
-      <Screen name="Offers" component={Offers} />
-      <Screen name="TrustedPartner" component={TrustedPartner} />
-      <Screen name="Partner" component={Partner} />
-      <Screen name="CarDetails" component={CarDetails} />
-      <Screen name="Reviews" component={Reviews} />
+      <Screen name="Welcome"  component={gestureHandlerRootHOC(Welcome)} />
+      <Screen name="OnBoarding" component={gestureHandlerRootHOC(OnBoarding)} />
+      <Screen name="SignIn" component={gestureHandlerRootHOC(SignIn)} />
+      <Screen name="CreateAccount" component={gestureHandlerRootHOC(CreateAccount)} />
+      <Screen name="Login" component={gestureHandlerRootHOC(Login)} />
+      <Screen name="YourProfileDetails" component={gestureHandlerRootHOC(YourProfileDetails)} />
+      <Screen name="Home" component={gestureHandlerRootHOC(Home)} />
+      <Screen name="ForgotPassword" component={gestureHandlerRootHOC(ForgotPassword)} />
+      <Screen name="ConfirmCode" component={gestureHandlerRootHOC(ConfirmCode)} />
+      <Screen name="CreatePassword" component={gestureHandlerRootHOC(CreatePassword)} />
+      <Screen name="MyWatchList" component={gestureHandlerRootHOC(MyWatchList)} />
+      <Screen name="TopRated" component={gestureHandlerRootHOC(TopRated)} />
+      <Screen name="Offers" component={gestureHandlerRootHOC(Offers)} />
+      <Screen name="TrustedPartner" component={gestureHandlerRootHOC(TrustedPartner)} />
+      <Screen name="Partner" component={gestureHandlerRootHOC(Partner)} />
+      <Screen name="CarDetails" component={gestureHandlerRootHOC(CarDetails)} />
+      <Screen name="Reviews" component={gestureHandlerRootHOC(Reviews)} />
       <Screen
         name="DelieveryAddressDetails"
-        component={DelieveryAddressDetails}
+        component={gestureHandlerRootHOC(DelieveryAddressDetails)}
       />
-      <Screen name="MyBookings" component={MyBookings} />
-      <Screen name="TrackBooking" component={TrackBooking} />
-      <Screen name="Profile" component={Profile} />
-      <Screen name="EditProfile" component={EditProfile} />
-      <Screen name="Address" component={Address} />
-      <Screen name="AddNewAddress" component={AddNewAddress} />
-      <Screen name="Language" component={Language} />
-      <Screen name="PrivacyPolicy" component={PrivacyPolicy} />
-      <Screen name="InviteFriends" component={InviteFriends} />
-      <Screen name="HelpContact" component={HelpContact} />
-      <Screen name="AllMakes" component={AllMakes} />
-      <Screen name="Addcar" component={Addcar} />
-      <Screen name="Inbox" component={Inbox} />
-      <Screen name="Mycars" component={Mycars} />
-      <Screen name="Chat" component={Chat} />
+      <Screen name="MyBookings" component={gestureHandlerRootHOC(MyBookings)} />
+      <Screen name="TrackBooking" component={gestureHandlerRootHOC(TrackBooking)} />
+      <Screen name="Profile" component={gestureHandlerRootHOC(Profile)} />
+      <Screen name="EditProfile" component={gestureHandlerRootHOC(EditProfile)} />
+      <Screen name="Address" component={gestureHandlerRootHOC(Address)} />
+      <Screen name="AddNewAddress" component={gestureHandlerRootHOC(AddNewAddress)} />
+      <Screen name="Language" component={gestureHandlerRootHOC(Language)} />
+      <Screen name="PrivacyPolicy" component={gestureHandlerRootHOC(PrivacyPolicy)} />
+      <Screen name="InviteFriends" component={gestureHandlerRootHOC(InviteFriends)} />
+      <Screen name="HelpContact" component={gestureHandlerRootHOC(HelpContact)} />
+      <Screen name="AllMakes" component={gestureHandlerRootHOC(AllMakes)} />
+      <Screen name="Addcar" component={gestureHandlerRootHOC(Addcar)} />
+      <Screen name="Inbox" component={gestureHandlerRootHOC(Inbox)} />
+      <Screen name="Mycars" component={gestureHandlerRootHOC(Mycars)} />
+      <Screen name="Chat" component={gestureHandlerRootHOC(Chat)} />
     </Navigator>
   );
 }
