@@ -66,6 +66,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: wp("5%"),
     marginVertical: hp("1%"),
+    borderWidth:1,
+    borderColor: '#e5e5e5',
+    borderRadius: '20%'
   },
   ImageBody: {
     height: hp("6%"),

@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   FieldText: {
-    height: "100%",
+    // height: "100%",
     width: "85%",
     fontFamily: "UB",
     fontSize: rf(12),

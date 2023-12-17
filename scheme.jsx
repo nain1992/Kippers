@@ -13,4 +13,8 @@ export const light = {
     BtnText:'#1D1138'
   };
   
-  
+  // "extra": {
+  //   "eas": {
+  //     "projectId": "5042ce5b-6581-4e6c-b958-b5f093de30c3"
+  //   }
+  // },

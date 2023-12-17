@@ -34,7 +34,7 @@ const InviteFriends = (props) => {
         );
       })}
       <ScrollView>
-        <View>
+        <View style={styles.box}>
           {invitation.map((item, index) => {
             return <Invitation item={item} key={index} />;
           })}
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: light.bgLight,
   },
+  
 });
 
 const mapStateToProps = (state) => ({

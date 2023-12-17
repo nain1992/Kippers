@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   inputstyles: {
-    height: "100%",
+    // height: "100%",
     width: "100%",
     fontFamily: "UR",
     fontSize: rf(11),
