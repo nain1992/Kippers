@@ -21,7 +21,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 const TextFields = (props) => {
   const [show, setShow] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const [countryCode, setCountryCode] = useState("+1");
   const [Picker, setPicker] = useState();
 
   return (
@@ -52,15 +52,9 @@ const TextFields = (props) => {
         </TouchableOpacity>
       ) : null}
       <TextInput
-        onChangeText={props?.onChangeText}
-        placeholder={props?.placeholder}
+        {...props}
         placeHolderTextColor={"#212121"}
-        keyboardType={props?.keyboardType}
         style={styles.Input}
-        showSoftInputOnFocus={props?.showSoftInputOnFocus}
-        value={props?.value}
-        onPressIn={props?.onPressIn}
-        multiline={props?.multiline}
       />
       <TouchableOpacity onPress={props?.onPress}>
         {props?.Icon}

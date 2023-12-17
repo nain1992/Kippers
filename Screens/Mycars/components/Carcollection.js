@@ -168,14 +168,23 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   dropdown: {
-    height: hp("12%"),
-    width: wp("30%"),
+    height: hp("14%"),
+    width: wp("26%"),
     backgroundColor: "#fff",
-    borderRadius: 15,
+    borderRadius: 10,
     position: "absolute",
     right: 0,
     justifyContent: "space-around",
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+
+    elevation: 6,
   },
   innerbody: {
     flexDirection: "row",

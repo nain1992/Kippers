@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   serachcarbody: {
     height: hp("6%"),
-    width: wp("70%"),
+    width: wp("75%"),
     borderRadius: 10,
     backgroundColor: "#F5F5F5",
     paddingLeft: 10,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   addcarbody: {
     height: hp("6%"),
-    width: wp("15%"),
+    width: wp("12%"),
     borderRadius: 10,
     backgroundColor: "#FF1111",
     justifyContent: "center",

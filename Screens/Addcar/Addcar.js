@@ -18,6 +18,7 @@ import { light } from "../../scheme";
 import Fields from "./components/Fields";
 import { KeyboardAvoidingScrollView } from "react-native-keyboard-avoiding-scroll-view";
 import * as ImagePicker from "expo-image-picker";
+import StandardBtn from "../../component/StandardBtn";
 
 const Addcar = (props) => {
   const [image, setImage] = useState(null);
@@ -67,6 +68,9 @@ const Addcar = (props) => {
           <Fields title={"Car Brand"} placeholder="Enter car name" />
           <Fields title={"Seating Capacity"} placeholder="Enter car name" />
           <Fields title={"Rental Price"} placeholder="Enter car name" />
+          <View style={styles.btnwrapper}>
+            <StandardBtn Title={"Add"} />
+          </View>
         </View>
       </ScrollView>
       <BottomTabMenu activeicon={"Addcar"} navigation={props?.navigation} />
@@ -90,8 +94,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   uploadbody: {
-    height: hp("15%"),
-    width: hp("15%"),
+    height: hp("13%"),
+    width: hp("13%"),
     borderRadius: 10,
     backgroundColor: "#F3F3F3",
     alignSelf: "center",
@@ -106,8 +110,8 @@ const styles = StyleSheet.create({
     color: light.textStandard,
   },
   uploadicon: {
-    height: hp("5%"),
-    width: hp("5%"),
+    height: hp("4%"),
+    width: hp("4%"),
     backgroundColor: "#FF5E5E",
     borderRadius: 100,
     position: "absolute",
@@ -115,6 +119,10 @@ const styles = StyleSheet.create({
     right: 0,
     justifyContent: "center",
     alignItems: "center",
+  },
+  btnwrapper: {
+    marginVertical: hp("3%"),
+    alignSelf: "center",
   },
 });
 

@@ -10,7 +10,11 @@ import { connect } from "react-redux";
 import DatePicker from "react-native-modern-datepicker";
 import { KeyboardAvoidingScrollView } from "react-native-keyboard-avoiding-scroll-view";
 
-import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import {
+  MaterialCommunityIcons,
+  MaterialIcons,
+  AntDesign,
+} from "@expo/vector-icons";
 import ForgotHeader from "../../component/ForgotHeader";
 import TextFields from "./component/TextFileds";
 import StandardBtn from "../../component/StandardBtn";
@@ -57,7 +61,7 @@ const EditProfile = (props) => {
         <View style={styles.FieldWrapper}>
           <TextFields
             value={fullname}
-            placeholder={data?.fullname ? data?.fullname : fullname}
+            placeholder={"Full name"}
             onChangeText={(val) => setFullName(val)}
           />
           <TextFields
@@ -96,14 +100,8 @@ const EditProfile = (props) => {
             onChangeText={(val) => setEmail(val)}
           />
           <TextFields
-            placeholder="united States"
-            Icon={
-              <MaterialCommunityIcons
-                name="email-outline"
-                size={hp("2%")}
-                color="black"
-              />
-            }
+            placeholder="Country"
+            Icon={<AntDesign name="caretdown" size={hp("2%")} color="black" />}
             onChangeText={(val) => setEmail(val)}
           />
           <TextFields

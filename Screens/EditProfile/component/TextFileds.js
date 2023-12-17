@@ -22,7 +22,7 @@ import { light } from "../../../scheme";
 
 const TextFields = (props) => {
   const [show, setShow] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
+  const [countryCode, setCountryCode] = useState("+1");
   return (
     <View style={styles.container}>
       {props?.Picker == true ? (
@@ -42,7 +42,6 @@ const TextFields = (props) => {
           <AntDesign name="down" size={hp("2%")} color="#212121" />
           <CountryPicker
             show={show}
-            // when picker button press you will get the country object with dial code
             pickerButtonOnPress={(item) => {
               setCountryCode(item.dial_code);
               setShow(false);
@@ -51,13 +50,9 @@ const TextFields = (props) => {
         </TouchableOpacity>
       ) : null}
       <TextInput
-        onChangeText={props?.onChangeText}
-        placeholder={props?.placeholder}
+        {...props}
         placeHolderTextColor={"#212121"}
-        keyboardType={props?.keyboardType}
         style={styles.Input}
-        showSoftInputOnFocus={props?.showSoftInputOnFocus}
-        value={props?.value}
         onPressIn={props?.onPressIn}
       />
       <TouchableOpacity>{props?.Icon}</TouchableOpacity>

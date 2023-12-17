@@ -13,52 +13,6 @@ import ProfileFields from "./component/ProfileFields";
 import BottomTabMenu from "../../component/BottomTabMenu";
 
 const Profile = (props) => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: props?.theme?.bgLight,
-    },
-
-    HeaderWrapper: {
-      flexDirection: "row",
-      alignItems: "center",
-      paddingHorizontal: wp("5%"),
-      height: hp("10%"),
-      paddingTop: hp("2%"),
-    },
-    IconWrapper: {
-      height: 20,
-      width: 20,
-      overflow: "hidden",
-    },
-    LableText: {
-      fontFamily: "UB",
-      fontSize: rf(18),
-      color: props?.theme?.textStandard,
-      marginLeft: wp("3%"),
-    },
-    SwitchWrappr: {
-      width: wp("100%"),
-      paddingHorizontal: wp("5%"),
-      flexDirection: "row",
-      justifyContent: "flex-end",
-      alignItems: "center",
-    },
-    SwitchText: {
-      fontFamily: "UR",
-      fontSize: rf(11),
-      color: props?.theme?.textStandard,
-    },
-    FieldWrapper: {
-      alignItems: "center",
-    },
-  });
-
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {
-    setIsEnabled((previousState) => !previousState);
-  };
-
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -73,7 +27,7 @@ const Profile = (props) => {
         <Text style={styles.LableText}>Profile</Text>
       </View>
 
-      <ProfilePicture name={data?.fullname} />
+      <ProfilePicture />
       <View style={styles.FieldWrapper}>
         <ProfileFields
           onPress={() => props.navigation.navigate("EditProfile")}
@@ -83,7 +37,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -95,7 +49,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -108,7 +62,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -120,7 +74,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -132,7 +86,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -144,7 +98,7 @@ const Profile = (props) => {
             <Ionicons
               name="chevron-forward"
               size={hp("2.5%")}
-              color={props?.theme?.textStandard}
+              color={light?.textStandard}
             />
           }
         />
@@ -158,6 +112,47 @@ const Profile = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: light?.bgLight,
+  },
+
+  HeaderWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: wp("5%"),
+    height: hp("10%"),
+    paddingTop: hp("2%"),
+  },
+  IconWrapper: {
+    height: 20,
+    width: 20,
+    overflow: "hidden",
+  },
+  LableText: {
+    fontFamily: "UB",
+    fontSize: rf(18),
+    color: light?.textStandard,
+    marginLeft: wp("3%"),
+  },
+  SwitchWrappr: {
+    width: wp("100%"),
+    paddingHorizontal: wp("5%"),
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  SwitchText: {
+    fontFamily: "UR",
+    fontSize: rf(11),
+    color: light?.textStandard,
+  },
+  FieldWrapper: {
+    alignItems: "center",
+  },
+});
 
 const mapStateToProps = (state) => ({
   errors: state.errors.errors,

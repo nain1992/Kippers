@@ -41,7 +41,7 @@ const InviteFriends = (props) => {
         style={[
           styles.InviteBtn,
           {
-            backgroundColor: invite == 1 ? "#1D1138" : "transparent",
+            backgroundColor: invite == 1 ? light?.Btn : "transparent",
           },
         ]}
       >
@@ -49,7 +49,7 @@ const InviteFriends = (props) => {
           style={[
             styles.InviteText,
             {
-              color: invite == 1 ? "#fff" : "#1D1138",
+              color: invite == 1 ? "#fff" : light?.Btn,
             },
           ]}
         >
@@ -91,11 +91,11 @@ const styles = StyleSheet.create({
     height: hp("3.5"),
     width: wp("15%"),
     borderRadius: 100,
-    backgroundColor: "black",
+    backgroundColor: light?.Btn,
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "#1D1138",
+    borderColor: light?.Btn,
   },
   InviteText: {
     fontFamily: "UR",
