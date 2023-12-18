@@ -4,9 +4,9 @@ import {
   Text,
   View,
   TouchableOpacity,
-  StatusBar,
   Image,
   ImageBackground,
+  Platform,
 } from "react-native";
 import {
   widthPercentageToDP as wp,
@@ -17,11 +17,11 @@ import { dark, light } from "../../scheme";
 import { LinearGradient } from "expo-linear-gradient";
 import { RFValue as rf } from "react-native-responsive-fontsize";
 import { connect } from "react-redux";
+import { StatusBar } from 'expo-status-bar';
 
 const OnBoarding = (props) => {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
       <ImageBackground
         style={styles.BgImageWrapper}
         source={require("../../assets/newcar1.jpg")}
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: light.bgLight,
   },
   BgImageWrapper: {
-    height: hp("100%"),
+    height: Platform.OS == "android" ? hp("110%") : hp("100%"),
     width: wp("100%"),
   },
   framewrapper: {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -12,7 +12,6 @@ import StandardBtn from "../../component/StandardBtn";
 const Welcome = (props) => {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
       <View style={styles.LogoWrapper}>
         <Image
           source={require("../../assets/Logo.png")}

@@ -4,7 +4,6 @@ import {
   Text,
   View,
   TouchableOpacity,
-  StatusBar,
   KeyboardAvoidingView,
 } from "react-native";
 import {
@@ -21,6 +20,7 @@ import Logo from "../../component/Logo";
 import TextFields from "./component/TextFields";
 import StandardBtn from "../../component/StandardBtn";
 import LinkAccount from "./component/LinkAccount";
+import { StatusBar } from 'expo-status-bar';
 
 const Login = (props) => {
   const [Remember, setRemember] = useState(false);
@@ -42,7 +42,6 @@ const Login = (props) => {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <StatusBar style="auto" />
       <Logo onPress={() => props.navigation.goBack()} />
       <Text style={styles.TitleText}>Login to your Account</Text>
       <View style={styles.FieldWrapper}>
